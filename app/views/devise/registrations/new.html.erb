@@ -1,0 +1,30 @@
+<h1>Sign up</h1>
+
+<div class="panel-group" id="accordion">
+  <div class="panel panel-primary r-panel">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+        Register as buyer</a>
+      </h4>
+    </div>
+    <div id="collapse1" class="panel-collapse collapse">
+      <div class="panel-body">
+        <%= render "devise/registrations/forms/buyer" %>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-success r-panel">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+        Register as merchant</a>
+      </h4>
+    </div>
+    <div id="collapse2" class="panel-collapse collapse">
+      <div class="panel-body">
+        <%= render "devise/registrations/forms/merchant" %>
+      </div>
+    </div>
+  </div>
+</div>

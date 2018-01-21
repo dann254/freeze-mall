@@ -1,0 +1,15 @@
+.r-panel a:active {
+  text-decoration: none;
+}
+.r-panel a:hover {
+  text-decoration: none;
+}
+.r-panel a {
+  text-decoration: none;
+  display: block;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

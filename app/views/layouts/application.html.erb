@@ -4,14 +4,16 @@
     <title>FreezeMall</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <!-- <%= javascript_include_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js' %> -->
+    <%= stylesheet_link_tag    'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' %>
   </head>
 
   <body>
     <%= render 'layouts/nav' %>
+
+    <p class="alert alert-success"><%= notice %></p>
+    <p class="alert alert-info"><%= alert %></p>
     <div class="container">
       <%= yield %>
     </div>
