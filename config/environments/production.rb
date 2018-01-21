@@ -62,7 +62,7 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "freeze-mall_#{Rails.env}"
   config.action_mailer.perform_caching = false
 
-  onfig.action_mailer.perform_deliveries = true
+  config.action_mailer.perform_deliveries = true
 
   config.action_mailer.default_url_options = { host: ENV["HOST"], port: ENV["PORT"] }
   config.action_mailer.delivery_method = :smtp
