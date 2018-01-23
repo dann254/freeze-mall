@@ -1,4 +1,5 @@
 class BuyerController < ApplicationController
+  layout 'buyer_dash'
   before_action :authenticate_user!, :is_buyer?
   def dashboard
 

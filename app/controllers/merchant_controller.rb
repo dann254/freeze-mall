@@ -1,4 +1,5 @@
 class MerchantController < ApplicationController
+  layout 'merchant_dash'
   before_action :authenticate_user!, :is_merchant?
   def dashboard
 

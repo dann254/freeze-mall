@@ -13,3 +13,24 @@ input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+.merchant_register {
+  background-color: #80deea;
+}
+
+.buyer_register {
+}
+#error_explanation h2 {
+  display: none;
+}
+#error_explanation ul {
+  background: #ff8a80;
+  border-radius: 4px;
+}
+.item {
+  height: 400px !important;
+  overflow: hidden;
+}
+.logout > a {
+  display: block !important;
+  width: 100%;
+}
