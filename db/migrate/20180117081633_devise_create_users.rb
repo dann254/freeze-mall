@@ -27,6 +27,9 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.1]
       ## role
       t.text :role, default: "buyer"
 
+      ## shop_profile
+      t.boolean :shop_profile
+
       ## Confirmable
       t.string   :confirmation_token
       t.datetime :confirmed_at

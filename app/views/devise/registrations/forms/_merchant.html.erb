@@ -4,7 +4,7 @@
   <%= devise_error_messages! %>
 
   <div class="form-group">
-    <%= f.label :username %><br />
+    <%= f.label :username %><em> (3 characters minimum)</em><br />
     <%= f.text_field :username, autofocus: true, class: "form-control", required: '' %>
   </div>
 
@@ -26,7 +26,7 @@
     <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control", required: '' %>
   </div>
   <div class="form-group">
-    <%= f.hidden_field :role, class: "form-control", value: "merchant" %>
+    <%= f.hidden_field :role, class: "form-control merole", value: "merchant" %>
   </div>
 
   <div class="actions">
