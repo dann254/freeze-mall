@@ -1,0 +1,36 @@
+<%= form_with(model: shop, local: true) do |f| %>
+  <% if shop.errors.any? %>
+    <div class="">
+      <% shop.errors.full_messages.each do |message| %>
+        <span class="form_error"> <%= message %> </span><br>
+      <% end %>
+    </div>
+  <% end %>
+  <div class="form-group">
+    <%= f.label :Shop_name %><br />
+    <%= f.text_field :name, autofocus: true, class: "form-control", required: '', placeholder: "Shop name" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :Description %><br />
+    <%= f.text_area :description, class: "form-control", required: '', placeholder: "Description" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :Country %><br />
+    <%= f.select :country, options_for_select([['Kenya', "Kenya"]],['Kenya', "Kenya"] ), {}, {class: "form-control", required: ''}%>
+  </div>
+  <div class="form-group">
+    <%= f.label :City_or_town %><br />
+    <%= f.text_field :city, class: "form-control", required: '', placeholder: "City/Town" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :Purchase_Payment_Methond %><br />
+    <%= f.select :payment, options_for_select([['M-Pesa', "mpesa"]],['M-Pesa', "mpesa"] ), {}, {class: "form-control", required: ''}%>
+  </div>
+  <div class="form-group">
+    <%= f.label :Account_number %><br />
+    <%= f.number_field :account, class: "form-control", required: '', placeholder: "Account number"%>
+  </div>
+  <div class="actions">
+    <%= f.submit "Submit", class: "btn btn-block btn-primary"%>
+  </div>
+<% end %>

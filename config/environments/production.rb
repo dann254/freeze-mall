@@ -62,6 +62,22 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "freeze-mall_#{Rails.env}"
   config.action_mailer.perform_caching = false
 
+  config.action_mailer.perform_deliveries = true
+
+  config.action_mailer.default_url_options = { host: ENV["E_HOST"], port: ENV["E_PORT"] }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.smtp_settings = {
+  address: ENV["EMAIL_ADRESS"],
+  port: ENV["EMAIL_PORT"],
+  domain: ENV["EMAIL_DOMAIN"],
+  authentication: :login,
+  # enable_starttls_auto: true,
+  ssl: true,
+  user_name: ENV["EMAIL_USERNAME"],
+  password: ENV["EMAIL_PASSWORD"]
+  }
+
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
