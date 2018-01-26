@@ -1,15 +1,15 @@
 class Shop < ApplicationRecord
   belongs_to :user
-  validates :name, presence: true,
+  validates :name, presence: true, uniqueness: true,
                       length: {minimum: 3, maximum: 250},
-                      format: {with: /\A[a-z0-9\-_]+\z/}
+                      format: {with: /\A[a-z0-9\-_ ]+\z/}
   validates :description, presence: true,
                       length: {minimum: 10, maximum: 10000}
   validates :country, presence: true, if: :is_valid_country?
   validates :payment, presence: true, if: :is_valid_payment?
   validates :city, presence: true,
                       length: {minimum: 2, maximum: 250}
-  validates :account, presence: true,
+  validates :account, presence: true, uniqueness: true,
                       length: {minimum: 3, maximum: 30}
   private
     def is_valid_country?
