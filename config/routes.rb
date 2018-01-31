@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :products
   resources :shops
   devise_for :users, controllers:{ registrations: "registrations" }
   root 'home#home'

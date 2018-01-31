@@ -7,7 +7,7 @@ class ShopsController < ApplicationController
   # GET /shops
   # GET /shops.json
   def index
-    @shops = Shop.all
+    @shops = Shop.where(:user_id => current_user.id)
   end
 
   # GET /shops/1

@@ -154,13 +154,30 @@
                       <%end%>
                     </li>
                     <li>
+                      <%= link_to new_product_path() do%>
+                        <i class="fa fa-fw fa-plus"></i> Add product
+                      <%end%>
+                    </li>
+                    <li>
                         <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-shopping-cart"></i> Products <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="demo" class="collapse">
                             <li>
-                                <a href="#">Dropdown Item</a>
+                                <%= link_to "All products", products_path()%>
                             </li>
                             <li>
-                                <a href="#">Dropdown Item</a>
+                                <a href="#">Watches</a>
+                            </li>
+                            <li>
+                                <a href="#">Phones</a>
+                            </li>
+                            <li>
+                                <a href="#">Laptops</a>
+                            </li>
+                            <li>
+                                <a href="#">Computers</a>
+                            </li>
+                            <li>
+                                <a href="#">Computer accessories</a>
                             </li>
                         </ul>
                     </li>

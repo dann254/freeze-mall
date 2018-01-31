@@ -10,10 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180126091803) do
+ActiveRecord::Schema.define(version: 20180129083544) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "products", force: :cascade do |t|
+    t.bigint "shop_id"
+    t.string "name"
+    t.text "description"
+    t.string "category"
+    t.integer "price"
+    t.integer "quantity"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "avatar_file_name"
+    t.string "avatar_content_type"
+    t.integer "avatar_file_size"
+    t.datetime "avatar_updated_at"
+    t.index ["shop_id"], name: "index_products_on_shop_id"
+  end
 
   create_table "shops", force: :cascade do |t|
     t.bigint "user_id"

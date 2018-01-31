@@ -1,0 +1,48 @@
+// Place all the styles related to the products controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.product-q {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+.tnail {
+  position: relative;
+  display: block;
+  width: 100%; /* Change this */
+  height: 200px; /* Change this */
+  overflow: hidden;
+  border: 1px solid #feebee;
+}
+.tnail img {
+  position: absolute;
+  left: -10px; /* Change this */
+  top: -10px; /* Change this */
+}
+.hew {
+  padding: 0 !important;
+}
+
+.thumbnail a {
+  text-decoration: none;
+}
+.thumbnail a:hover {
+  text-decoration: none;
+  background-color: white;
+  color: blue;
+}
+.thumbnail a:visited {
+  color: #337ab7;
+}
+.actions {
+  width: 100%;
+}
+.actions > a {
+  width: 30%;
+  display: inline-block;
+  background: rgb(217, 238, 244);
+  text-align: center;
+}
+.inline {
+  display: inline;
+}

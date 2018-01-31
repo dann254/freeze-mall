@@ -5,7 +5,7 @@ class HomeController < ApplicationController
     elsif user_signed_in? and current_user.role=='buyer'
       redirect_to dashboard_path
     else
-
+      @products = Product.all
     end
   end
 end

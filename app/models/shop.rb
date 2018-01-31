@@ -1,5 +1,7 @@
 class Shop < ApplicationRecord
   belongs_to :user
+  has_many :product, dependent: :destroy
+
   validates :name, presence: true, uniqueness: true,
                       length: {minimum: 3, maximum: 250},
                       format: {with: /\A[a-z0-9\-_ ]+\z/}
