@@ -4,13 +4,15 @@
     <title>FreezeMall</title>
     <%= csrf_meta_tags %>
 
+    <%= favicon_link_tag 'cart-icon.png' %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag    'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' %>
   </head>
 
   <body>
-    add to cart
+
+    <%= render 'layouts/buyer_nav' %>
     <div class="container">
       <%= yield %>
     </div>

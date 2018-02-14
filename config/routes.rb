@@ -7,8 +7,7 @@ Rails.application.routes.draw do
   get 'm_dashboard' => 'merchant#dashboard'
 
   get 'dashboard' => 'buyer#dashboard'
-
-
+  get 'viewproduct/:id' => 'buyer#show_product', as: 'viewproduct'
   # namespace :merchant do
   #   resources :shops
   # end
